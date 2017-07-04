@@ -12,8 +12,6 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
-import raindrops.hwz.paylibrary.AppManager;
-import raindrops.hwz.paylibrary.PayActivity;
 import raindrops.hwz.paylibrary.ThirdPartyPayUtils;
 
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
@@ -49,9 +47,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
             } else {
                 ThirdPartyPayUtils.getInstance().getCallback().error(resp.errCode, resp.errStr);
             }
-        } else {
-            AppManager.getAppManager().finishActivity(PayActivity.class);
-            finish();
         }
+        finish();
     }
 }
