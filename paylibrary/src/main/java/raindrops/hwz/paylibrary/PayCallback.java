@@ -13,7 +13,7 @@ public abstract class PayCallback implements IPayCallback {
     }
 
     @Override
-    public void error(int code, String msg) {
+    public void error(String code, String msg) {
         finish();
         payError(code, msg);
     }
@@ -26,6 +26,6 @@ public abstract class PayCallback implements IPayCallback {
 
     public abstract void paySuccess();
 
-    public abstract void payError(int code, String msg);
+    public abstract void payError(String code, String msg);
 
 }

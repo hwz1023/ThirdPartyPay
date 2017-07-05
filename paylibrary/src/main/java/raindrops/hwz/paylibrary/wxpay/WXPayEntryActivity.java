@@ -45,7 +45,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
             if (resp.errCode == 0) {
                 ThirdPartyPayUtils.getInstance().getCallback().success();
             } else {
-                ThirdPartyPayUtils.getInstance().getCallback().error(resp.errCode, resp.errStr);
+                ThirdPartyPayUtils.getInstance().getCallback().error(String.valueOf(resp.errCode), resp.errStr);
             }
         }
         finish();

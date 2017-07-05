@@ -8,6 +8,6 @@ public interface IPayCallback {
 
     void success();
 
-    void error(int code, String msg);
+    void error(String code, String msg);
 
 }
